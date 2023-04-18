@@ -1,0 +1,226 @@
+html{
+  box-sizing: border-box;
+  background-color: #152c27;
+  background-image: repeating-linear-gradient(to right, #171518, #4609b8, #171518, #790cd3);
+  background-size: 700%;
+  transition: background-position 1s;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient();
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+  color: rgb(238, 243, 243);
+  align-items: center;
+  margin: 20px;
+}
+#contadorPalabras{
+  font-size: 35px;
+  margin-left: 20%;
+  position:absolute;
+  margin-top: 5%;
+}
+.alura{
+  vertical-align: middle;
+}
+
+.imagen-b{
+  object-fit: contain;
+  width: 50%;
+  height: 50%;
+}
+
+.principal{
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.article-uno{
+  width: 60%;
+  text-align: center;
+  margin-top: 10%;
+  
+}
+
+.article-dos,.article-tres{
+  width: 40%;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.label{
+  color: #e2e2e0;
+  font-size: 17px;
+  display: block;
+  padding: 10px
+}
+
+.parrafo, .mensaje-info{
+  text-align: center;
+  color: #e2e2e0;
+  padding: 2px
+}
+
+.textarea-original, .textarea-modificada{
+  width: 80%;
+  height: 350px;
+  resize: none;
+  font-size: 20px;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.textarea-original{
+  background-color: #272727;
+  color: #e2e2e0;
+}
+
+.textarea-original::placeholder{
+  color: #e2e2e0;
+}
+
+.textarea-modificada{
+  background-color: #272727;
+  color: #e2e2e0;
+}
+
+.boton{
+  text-align: center;
+  background-color: #4609b8;
+  color: rgb(238, 243, 243);
+  border: 2px solid #1a2e35;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 10px 40px 10px 40px;
+}
+
+.copiar {
+  width: 80%;
+  margin: 5px auto;
+  display: block;
+}
+
+.boton:hover{
+  background-color: #1a2e35;
+  border: 2px solid #4609b8;
+}
+
+.notificacion {
+  width: 24%;
+  height: 10%;
+  font-size: smaller;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #171e20;
+  color: rgb(238, 243, 243);
+  padding: 14px 45px 10px 10px;
+  border: 2px solid #018673;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.notificacion.show {
+  opacity: 1;
+}
+
+.notificacion .cerrar {
+  position: fixed;
+  top: 1.8rem;
+  right: 2rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #a10f0f;
+  color: #ffffff;
+  border: none;
+  border-radius: 25%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.notificacion .texto {
+  padding-right: 2rem;
+  margin-left: 2rem;
+}
+
+.notificacion .cerrar:hover {
+  background-color: rgb(245, 23, 23);
+}
+
+.close-button {
+  z-index: 1;
+}
+
+.notificacion progress {
+  /* Le damos un ancho del 100% del contenedor */
+  width: 100%;
+  height: 10px;
+  /* Le quitamos el borde por defecto */
+  border: none;
+  /* Le damos un color de fondo gris claro */
+  background-color: #d3d3d3;
+}
+
+/* Seleccionamos la parte interna de la barra de progreso */
+.notificacion progress::-webkit-progress-value {
+  /* Le damos un color verde */
+  background-color: #018673;
+}
+
+/* Seleccionamos la parte externa de la barra de progreso */
+.notificacion progress::-webkit-progress-bar {
+  /* Le damos un color gris oscuro */
+  background-color: #1a2e35;
+}
+
+@media (max-width: 768px) {
+  .texto {
+    flex-basis: 100%;
+  }
+
+  .texto-codificado {
+    flex-basis: 100%;
+  }
+
+  .informacion {
+    flex-basis: 100%;
+  }
+
+  /* Ajuste del tamaño de fuente para los botones */
+  .texto .boton {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .texto {
+    flex-basis: 100%;
+  }
+
+  .texto-codificado {
+    flex-basis: 100%;
+  }
+
+  .informacion {
+    flex-basis: 100%;
+  }
+
+  /* Ajuste del tamaño de fuente para los botones */
+  .texto .boton {
+    font-size: 12px;
+  }
+}
